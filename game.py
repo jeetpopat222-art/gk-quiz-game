@@ -14,18 +14,16 @@ else:
       
 
 with open("question.txt") as f:
-                for line in f:
-                    ques = line.readline().lower()
-                print(ques)
+                line = f.readlines()
+                print(line[0])
                 ask_ans = input("enter your answer:").lower()
-                for answer in range(1):
-                        ans_read = f.readline().lower()
-                        
-                        if ask_ans in ans_read:
+                with open("question.txt") as f:
+                        answer = f.readlines()
+                        real_ans = answer[1]
+                        if ask_ans == real_ans:
                                 print("correct answer")
-                        else:
-                            print(f"wrong,the correct answer was {ans_read}")
-                            continue
+                        
+                        
 
 
         
