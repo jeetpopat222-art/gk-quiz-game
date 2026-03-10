@@ -21,16 +21,19 @@ else:
                         ask_ans = input("enter your answer: ").lower()
                         if ask_ans == "ttt":
                                 break
-                        for i in range(1,41,2):
-                                answer = ques[i].strip().lower()
-                                if ask_ans == answer:
+
+                        answer = ques[i+1].strip().lower()
+                        if ask_ans == answer:
                                         right_answer += 1
-                                else:
-                                        wrong_answer +=1
+                        elif ask_ans != answer:
+                                        wrong_answer += 1
+                                       
 
 
+print(right_answer)
+print(wrong_answer)
 
-                        
+print("thanks for playing the game(:")                        
 
         
         
